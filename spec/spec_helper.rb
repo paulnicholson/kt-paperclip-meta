@@ -3,11 +3,13 @@ Bundler.require(:default)
 require "active_support/core_ext/module"
 require "active_record"
 require "active_job"
-require "paperclip"
+require "kt-paperclip"
 require "rails"
-require "delayed_paperclip"
+require "kt-delayed_paperclip"
+require 'minitest/spec'
 require "minitest/autorun"
-require "mocha/setup"
+require "minitest/unit"
+require "mocha/minitest"
 
 ActiveRecord::Base.establish_connection(
   adapter: "sqlite3",
